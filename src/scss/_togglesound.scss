@@ -1,0 +1,105 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+body {
+  overflow: hidden;
+  background-image: url("./../../assets/winter-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.container {
+  margin: 100px auto;
+  width: 100%;
+  height: 100vh;
+  display: block;
+  text-align: center;
+
+  background-position: center center;
+  background-size: cover;
+  h1 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-weight: 700;
+    color: black;
+  }
+  ul {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    list-style: none;
+    .card {
+      position: relative;
+      cursor: pointer;
+      z-index: 10;
+      img {
+        width: 200px;
+        height: 200px;
+        border-radius: 40px;
+      }
+    }
+    .summer {
+      position: relative;
+    }
+    .summer::after {
+      content: "";
+      position: absolute;
+      background-image: url("./../../assets/icons/sun.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 30px;
+      height: 30px;
+      top: 45%;
+      left: 45%;
+      z-index: 5;
+    }
+
+    .fall::after {
+      content: "";
+      position: absolute;
+      background-image: url("./../../assets/icons/cloud-rain.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 30px;
+      height: 30px;
+      top: 45%;
+      left: 45%;
+      z-index: 5;
+    }
+
+    .winter::after {
+      content: "";
+      position: absolute;
+      background-image: url("./../../assets/icons/cloud-snow.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 30px;
+      height: 30px;
+      top: 45%;
+      left: 45%;
+      z-index: 5;
+    }
+  }
+}
+
+.pause::after {
+  content: "";
+  position: absolute;
+  background-image: url("./../../assets/icons/pause.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 30px;
+  height: 30px;
+  top: 45%;
+  left: 45%;
+  z-index: 5;
+}
