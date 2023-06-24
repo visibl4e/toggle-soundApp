@@ -46,11 +46,22 @@ body {
         height: 200px;
         border-radius: 40px;
       }
+      .active {
+        background: red;
+      }
     }
-    .summer {
-      position: relative;
+    .card.pause::after {
+      position: absolute;
+      background-image: url("./../../assets/icons/pause.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      width: 30px;
+      height: 30px;
+      top: 45%;
+      left: 45%;
+      z-index: 10;
     }
-    .summer::after {
+    .card-summer::after {
       content: "";
       position: absolute;
       background-image: url("./../../assets/icons/sun.svg");
@@ -62,8 +73,7 @@ body {
       left: 45%;
       z-index: 5;
     }
-
-    .fall::after {
+    .card-fall::after {
       content: "";
       position: absolute;
       background-image: url("./../../assets/icons/cloud-rain.svg");
@@ -75,8 +85,7 @@ body {
       left: 45%;
       z-index: 5;
     }
-
-    .winter::after {
+    .card-winter::after {
       content: "";
       position: absolute;
       background-image: url("./../../assets/icons/cloud-snow.svg");
@@ -89,17 +98,4 @@ body {
       z-index: 5;
     }
   }
-}
-
-.pause::after {
-  content: "";
-  position: absolute;
-  background-image: url("./../../assets/icons/pause.svg");
-  background-repeat: no-repeat;
-  background-position: center center;
-  width: 30px;
-  height: 30px;
-  top: 45%;
-  left: 45%;
-  z-index: 5;
 }
